@@ -1,0 +1,22 @@
+# Transactions and Safe Operations
+
+## Transaction Example
+BEGIN TRANSACTION;
+UPDATE students
+SET email = 'updated@email.com'
+WHERE student_id = 1;
+COMMIT;
+--This transaction safely updates a students email
+
+## ROLLBACK Example
+BEGIN TRANSACTION;
+DELETE FROM students
+WHERE student_id = 2;
+ROLLBACK;
+--This rollback example cancels the delete operations and restores the previous database state 
+
+##Importance of transaction 
+Transactions help to maintain 
+ -data consistency 
+ -data reliability 
+ -safe updates and deletions 
