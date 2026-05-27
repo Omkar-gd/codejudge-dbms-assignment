@@ -1,9 +1,10 @@
 # ERD (Entity Relationship Diagram)
-
 ## Tables and Relationships
+
 ### batches
 - batch_id (PK)
 - batch_name
+
 Relationship:
 - One batch can contain many students.
 
@@ -11,6 +12,7 @@ Relationship:
 ### students
 - student_id (PK)
 - batch_id (FK)
+
 Relationship:
 - Many students belong to one batch.
 - One student can have many submissions.
@@ -19,6 +21,7 @@ Relationship:
 
 ### courses
 - course_id (PK)
+
 Relationship:
 - One course can contain many students.
 
@@ -27,12 +30,14 @@ Relationship:
 - enrollment_id (PK)
 - student_id (FK)
 - course_id (FK)
+
 Relationship:
 - Connects students and courses.
 
 
 ### problems
 - problem_id (PK)
+
 Relationship:
 - One problem can have many submissions.
 
@@ -41,6 +46,7 @@ Relationship:
 - submission_id (PK)
 - student_id (FK)
 - problem_id (FK)
+
 Relationship:
 - Belongs to one student and one problem.
 - Can contain multiple test results.
@@ -49,6 +55,7 @@ Relationship:
 ### test_results
 - result_id (PK)
 - submission_id (FK)
+
 Relationship:
 - Multiple test results belong to one submission.
 
@@ -56,6 +63,7 @@ Relationship:
 ### sessions
 - session_id (PK)
 - batch_id (FK)
+
 Relationship:
 - One batch can contain multiple sessions.
 
@@ -64,6 +72,7 @@ Relationship:
 - attendance_id (PK)
 - student_id (FK)
 - session_id (FK)
+
 Relationship:
 - Stores attendance for each student session.
 
